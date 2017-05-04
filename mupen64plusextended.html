@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>RetroArch - Mupen64Plus Extended</title>
+    <title>Mupen64Plus but with a reasonable amount of memory</title>
     <style>
       .emscripten { padding-right: 0; margin-left: auto; margin-right: auto; display: block; }
       textarea.emscripten { font-family: monospace; width: 80%; }
@@ -15,7 +15,7 @@
     </style>
   </head>
   <body>
-    <h1>Mupen64Plus Extended(?)</h1>
+    <h1>Mupen64Plus but with a reasonable amount of memory</h1>
     <hr/>
     <div class="emscripten" id="status">Downloading...</div>
     <div class="emscripten">
@@ -44,7 +44,7 @@
     <textarea class="emscripten" id="output" rows="8"></textarea>
     <hr>
     <div class="emscripten" id="controls">
-	u gay xD
+	changed controls to be usable on a computer without a numpad
     </div>
     <script type='text/javascript'>
       var count = 0;
@@ -74,15 +74,18 @@
         if (count === 0) {
           Module.FS_createFolder('/', 'etc', true, true);
           var config = 'input_player1_select = shift\n';
-          config += 'input_player1_l2 = a\n';
-          config += 'input_player1_l_x_plus = keypad6\n';
-          config += 'input_player1_l_x_minus = keypad4\n';
-          config += 'input_player1_l_y_plus = keypad5\n';
-          config += 'input_player1_l_y_minus = keypad8\n';
-          config += 'input_player1_r_x_plus = l\n';
-          config += 'input_player1_r_x_minus = j\n';
-          config += 'input_player1_r_y_plus = k\n';
-          config += 'input_player1_r_y_minus = i\n';
+          config += 'input_player1_l2 = z\n';
+	  config += 'input_player1_r = e\n';
+	  config += 'input_player1_a = x\n';
+	  config += 'input_player1_b = c\n';
+          config += 'input_player1_l_x_plus = rightarrow\n';
+          config += 'input_player1_l_x_minus = leftarrow\n';
+          config += 'input_player1_l_y_plus = downarrow\n';
+          config += 'input_player1_l_y_minus = uparrow\n';
+          config += 'input_player1_r_x_plus = d\n';
+          config += 'input_player1_r_x_minus = a\n';
+          config += 'input_player1_r_y_plus = s\n';
+          config += 'input_player1_r_y_minus = w\n';
           config += 'input_netplay_flip_players = nul\n';
           config += 'input_frame_advance = nul\n';
           config += 'input_hold_fast_forward = nul\n';
